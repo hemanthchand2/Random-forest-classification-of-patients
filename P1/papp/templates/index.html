@@ -1,0 +1,112 @@
+<html>
+    {% load static tailwind_tags %}
+    <head>
+        {% tailwind_css %}
+        <title>Patient classification</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="center-div">
+            <p class="text-center text-6xl mt-4 mb-6 w-14 anime fnt">Patient Treatment Classification</p>
+        </div>
+        <div class="max-w-lg mx-auto">
+            
+            <form method="POST" class="">
+                <p class="text-2xl mt-5 mb-5 fnt">Please enter the following details for the classification of the patient</p>
+                {% csrf_token %}
+                
+                    
+                            <label class="fnt"> Enter the HAEMATOCRIT value: </label>
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="HAEMATOCRIT">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the HAEMOGLOBINS value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="HAEMOGLOBINS">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the ERYTHROCYTE value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="ERYTHROCYTE">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the LEUCOCYTE value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="LEUCOCYTE">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the THROMBOCYTE value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="THROMBOCYTE">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the MCH value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="MCH">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the MCHC value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="MCHC">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the MCV value:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="MCV">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the AGE of the patient:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="AGE">
+                        
+                    
+                
+                    
+                            <label class="fnt">Enter the SEX of the patient:</label> 
+                        
+                    
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 he" type="text" name="SEX">
+                        
+                            <br>
+                
+                    
+                            <button class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center m-auto" type="submit" name="submit">SUBMIT</button>
+                        
+                    
+                            <br>
+                            <br>
+                            <label class="fnt">{{result}}</label>
+                        
+                    
+            </form>
+        </div>
+    </body> 
+</html>
